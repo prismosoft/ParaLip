@@ -1,5 +1,11 @@
 import os
+from pathlib import Path
+import sys
+
 os.environ["OMP_NUM_THREADS"] = "1"
+path_root = Path(__file__).parents[3]
+sys.path.insert(1, str(path_root))
+
 from utils.hparams import set_hparams, hparams
 from datasets.lipgen.utils import build_phone_encoder
 
