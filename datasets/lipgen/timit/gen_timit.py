@@ -1,8 +1,8 @@
 import os
+os.environ["OMP_NUM_THREADS"] = "1"
+
 from pathlib import Path
 import sys
-
-os.environ["OMP_NUM_THREADS"] = "1"
 path_root = Path(__file__).parents[3]
 sys.path.insert(1, str(path_root))
 
