@@ -2,6 +2,11 @@ import os
 import glob
 import matplotlib
 
+from pathlib import Path
+import sys
+path_root = Path(__file__).parents[1]
+sys.path.insert(1, str(path_root))
+
 matplotlib.use('Agg')
 
 from tasks.grid_lipgen_task import GridDataset, FastLipGenTask
